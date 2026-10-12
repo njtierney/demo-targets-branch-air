@@ -1,0 +1,71 @@
+---
+title: "EDA"
+format: html
+---
+
+```{r}
+#| label: library
+source(here::here("packages.R"))
+```
+
+```{r}
+# load the targets pipeline in here
+tar_load_everything()
+
+# alternatively, look at loading
+# tar_load(
+#   c(
+#     may_path,
+#     air_may,
+#     air_fit,
+#     air_augmented,
+#     air_coefs,
+#     air_glance,
+#     read_air
+#   )
+# )
+```
+
+
+```{r}
+library(visdat)
+air_may
+
+vis_dat(air_may)
+```
+
+
+```{r}
+air_fit
+```
+
+```{r}
+summary(air_fit)
+```
+
+```{r}
+air_glance
+air_coefs
+```
+
+```{r}
+ggplot(air_augmented,
+       aes(x = .fitted,
+           y = .resid)) + 
+  geom_hline(yintercept = 0, linewidth = 1, linetype = 3) +
+  geom_point()
+```
+
+
+```{r}
+ggplot(air_augmented,
+       aes(x = ozone,
+           y = .fitted)) + 
+  geom_point() + 
+  geom_abline() +
+  lims(
+    x = c(0, 120),
+    y = c(0, 120)
+  )
+```
+

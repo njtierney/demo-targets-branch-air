@@ -1,0 +1,9 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+may_path|stem|873fbac5d66ab7db|48d986db803e3c78|2c530c1562a7fbd1|719589899|data-raw/monthly/air-quality-1973-05.csv|t20738.2410243613s|s585b|585|file|local|vector|||0||
+air_may|stem|ddbb65156e57b956|26f4351450b6a780|d405aac2eb881727|-1413844883||t20738.9741545632s|s486b|486|rds|local|vector|||0.159||
+air_fit|stem|cc94f611390fd924|3771311426649c53|d5dcb8b0d24d41ad|1784816197||t20738.9753506704s|s1991b|1991|rds|local|vector|||0.003||
+air_augmented|stem|f3a7bf4f7674de63|3304c04886f114c4|63ac3fc480072ce4|-59484556||t20738.9801542893s|s1932b|1932|rds|local|vector|||0.003||
+air_coefs|stem|da315cafc74a0779|eca3e25f6a0fa430|63ac3fc480072ce4|-364606942||t20738.9801545972s|s270b|270|rds|local|vector|||0.004||
+air_glance|stem|e9abd1cc1beb2e7e|b6eee2912c8f4ac6|63ac3fc480072ce4|-6609177||t20738.9801549735s|s350b|350|rds|local|vector|||0.026||
+read_air|function|30ba2504dd15aec4
+report|stem|69748824be2cfe24|9f712e3a88c2cb98|2c530c1562a7fbd1|787668912|docs/eda.html*docs/eda.qmd|t20738.9819225636s|s29811b|29811|file|local|vector|||4.356||
