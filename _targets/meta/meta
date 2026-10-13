@@ -1,3 +1,13 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+may_path|stem|873fbac5d66ab7db|48d986db803e3c78|2c530c1562a7fbd1|719589899|data-raw/monthly/air-quality-1973-05.csv|t20738.2410243613s|s585b|585|file|local|vector|||0||
+air_may|stem|ddbb65156e57b956|26f4351450b6a780|d405aac2eb881727|-1413844883||t20739.054612219s|s486b|486|rds|local|vector|||0.106||
+model_formula|stem|5bc69e60fd1f2988|56d66c0b43ad163e|2c530c1562a7fbd1|1813244285||t20739.054942204s|s65b|65|rds|local|vector|||0||
+air_augmented|stem|fc79d8cc3c112628|520ba57cea31bd5f|49f54771a04296be|-59484556||t20739.0549428707s|s1974b|1974|rds|local|vector|||0.008||
+air_coefs|stem|da315cafc74a0779|eca3e25f6a0fa430|f2eedac8e35b3186|-364606942||t20739.0549429706s|s270b|270|rds|local|vector|||0.004||
+air_glance|stem|7385d58077500e7b|eee8f7198f501415|5e9ad04bc1f96f1e|-6609177||t20739.0549432292s|s373b|373|rds|local|vector|||0.017||
+air_fit|stem|2992a13489bb7aa1|c254adca1bc84e07|71aa3ea65db5dfbe|1784816197||t20739.0725350329s|s2013b|2013|rds|local|vector|||0.001||
+report|stem|f3733bf8191142b1|18b15ed965824afe|a98f7c8fcc863622|787668912|docs/eda.html*docs/eda.qmd|t20739.0725778833s|s35852b|35852|file|local|vector|||3.686||
+fit_ozone|function|7f7eb4f8e3fdd69c
 read_air|function|30ba2504dd15aec4
-report|stem||9f712e3a88c2cb98|2c530c1562a7fbd1|787668912||t20738.995935613s||0|file|local|vector|||3.265||! Error running quarto CLI from R. Caused by error: ✖ Error returned by quarto CLI. ℹ Rerun with `quiet = FALSE` to see the full error message. Caused by error in `processx::run()`: ! System command 'quarto' failed
+glance_model|function|80321e9e0102e13c
+augment_model|function|376f1a703f2c5b61

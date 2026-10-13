@@ -4,26 +4,35 @@ format: html
 ---
 
 ```{r}
-#| label: library
+#| label: sources
+
+# make sure the packages are loaded
 source(here::here("packages.R"))
+# Make sure the relevant R scripts are loaded - in this case, the R scripts
+# in the R/ folder
+tar_source(here::here("R"))
 ```
 
 ```{r}
 # load the targets pipeline in here
-tar_load_everything()
-
-# alternatively, look at loading
-# tar_load(
-#   c(
-#     may_path,
-#     air_may,
-#     air_fit,
-#     air_augmented,
-#     air_coefs,
-#     air_glance,
-#     read_air
-#   )
-# )
+# You should make sure all the targets are named
+# so that targets can identify what targets are required in order
+# to run the pipeline.
+# i.e., do not use 
+## tar_load_everything()
+## tar_load(everything())
+## tar_load(starts_with())
+# As these will mean your quarto report may not render, since targets cannot
+# identify what targets need to be up to date for the report to render
+tar_load(
+  c(
+    air_may,
+    air_fit,
+    air_augmented,
+    air_coefs,
+    air_glance
+  )
+)
 ```
 
 
@@ -49,13 +58,9 @@ air_coefs
 ```
 
 ```{r}
-ggplot(air_augmented,
-       aes(x = .fitted,
-           y = .resid)) + 
-  geom_hline(yintercept = 0, linewidth = 1, linetype = 3) +
-  geom_point()
+# in R/
+gg_residuals(air_augmented)
 ```
-
 
 ```{r}
 ggplot(air_augmented,
@@ -67,5 +72,12 @@ ggplot(air_augmented,
     x = c(0, 120),
     y = c(0, 120)
   )
+```
+
+Where does the model perform the poorest?
+
+```{r}
+air_augmented |> 
+  arrange(.resid)
 ```
 

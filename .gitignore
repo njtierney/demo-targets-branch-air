@@ -6,4 +6,5 @@
 .DS_Store
 .quarto
 *.html
-docs/eda_files/*
+*_files/
+_targets/
